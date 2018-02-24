@@ -1,3 +1,4 @@
+import { Education } from './../models/Education';
 import { Skill } from './../models/Skill';
 import { Experience } from './../models/Experience';
 import { Injectable } from '@angular/core';
@@ -50,6 +51,15 @@ export class ResumeDataService {
     result.push(sk as Skill);
 
     result.push(sk as Skill);
+    return Observable.of(result);
+  }
+
+  public getEducation(): Observable<Education[]>{
+    // TODO: In the future we will retrieve this info from an Firebase API
+    const result: Education[] = [];
+    let ed: Education = {name: 'Ingeniero técnico en informática de sistemas', year: 2008, institution: 'Universidad de sevilla'};
+    result.push(ed as Education);
+
     return Observable.of(result);
   }
 

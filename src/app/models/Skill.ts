@@ -4,3 +4,4 @@ export interface Skill {
   /** Percentage of the skill (0 - 100) */
   percentage: number;
 }
+

@@ -10,16 +10,18 @@ import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { ExperienceComponent } from './experience/experience.component';
 // Angular material components
-import {MatCardModule, MatExpansionModule, MatDividerModule, MatProgressBarModule} from '@angular/material';
+import {MatCardModule, MatExpansionModule, MatDividerModule, MatProgressBarModule, MatIconModule} from '@angular/material';
 import { ResumeDataService } from './services/resume-data.service';
 import { SkillsComponent } from './skills/skills.component';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ExperienceComponent,
-    SkillsComponent
+    SkillsComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { SkillsComponent } from './skills/skills.component';
     MatCardModule,
     MatExpansionModule,
     MatDividerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatIconModule
   ],
   providers: [ResumeDataService],
   bootstrap: [AppComponent]
