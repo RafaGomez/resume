@@ -10,14 +10,16 @@ import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { ExperienceComponent } from './experience/experience.component';
 // Angular material components
-import {MatCardModule, MatExpansionModule, MatDividerModule} from '@angular/material';
+import {MatCardModule, MatExpansionModule, MatDividerModule, MatProgressBarModule} from '@angular/material';
 import { ResumeDataService } from './services/resume-data.service';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { ResumeDataService } from './services/resume-data.service';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     MatCardModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    MatProgressBarModule
   ],
   providers: [ResumeDataService],
   bootstrap: [AppComponent]

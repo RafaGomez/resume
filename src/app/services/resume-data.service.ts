@@ -1,3 +1,4 @@
+import { Skill } from './../models/Skill';
 import { Experience } from './../models/Experience';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -13,7 +14,7 @@ export class ResumeDataService {
    */
   public getExperiences(): Observable<Experience[]> {
     // TODO: In the future we will retrieve this info from an Firebase API
-    let result: Experience[] = [];
+    const result: Experience[] = [];
     let xp: Experience = {
       company: 'Schneider Electric',
       from: 'November 2011',
@@ -31,6 +32,24 @@ export class ResumeDataService {
     result.push(xp as Experience);
     result.push(xp as Experience);
 
+    return Observable.of(result);
+  }
+
+  public getSkills(): Observable<Skill[]>{
+    // TODO: In the future we will retrieve this info from an Firebase API
+    const result: Skill[] = [];
+    let sk: Skill = {name: 'Angular [2-5]', percentage: 90};
+    result.push(sk as Skill);
+    sk = {name: 'C#', percentage: 90};
+    result.push(sk as Skill);
+    sk = {name: 'ASP.NET (Core)', percentage: 70};
+    result.push(sk as Skill);
+    sk = {name: 'AngularJS', percentage: 70};
+    result.push(sk as Skill);
+    sk = {name: 'GIT', percentage: 70};
+    result.push(sk as Skill);
+
+    result.push(sk as Skill);
     return Observable.of(result);
   }
 
