@@ -2,12 +2,13 @@
   <mat-expansion-panel *ngFor='let xp of experiencesObs | async'>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{xp.job}}
+        <strong>{{xp.job}}</strong>
       </mat-panel-title>
       <mat-panel-description>
         {{xp.company}}
       </mat-panel-description>
     </mat-expansion-panel-header>
+      <div class="experience-dates"><mat-icon>date_range</mat-icon> from {{xp.from}} to {{xp.to}}</div>
       <ul class="experience-highlight">
         <li *ngFor="let highlight of xp.highlights">{{highlight}}</li>
       </ul>

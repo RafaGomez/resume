@@ -18,10 +18,11 @@ export class ResumeDataService {
     const result: Experience[] = [];
     let xp: Experience = {
       company: 'Schneider Electric',
-      from: 'November 2011',
+      from: 'Feb 2012',
       to: 'Now',
-      job: 'Software Engineer, frontend technical lead',
+      job: 'Full stack web developer and frontend technical lead',
       highlights: [
+        'I make the technical decisions regarding the technologies used in frontend',
         'Developed real time control applications for the Electric Business.',
         'Delivered software that supports several communication protocols (IEC 101, 104, MODBUS, IEC61850).',
         'Designed and developed a lightweight SCADA front-end for a real time back-end. (Angular 2 - 4)',
