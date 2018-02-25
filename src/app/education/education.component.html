@@ -1,0 +1,5 @@
+<div class="education-entry" *ngFor="let ed of education$ | async" >
+  <div class="education-row"><mat-icon class="education-icon">school</mat-icon> <span>{{ed.name}}</span></div>
+  <div class="education-row"><mat-icon class="education-icon">place</mat-icon> {{ed.institution}}</div>
+  <div class="education-row"><mat-icon class="education-icon">date_range</mat-icon> {{ed.year}}</div>
+</div>
