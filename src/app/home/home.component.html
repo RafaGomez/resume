@@ -1,10 +1,12 @@
 <div class="header mat-typography">
   <h1 class="headline">{{_name}}</h1>
-  <h2>Software engineer</h2>
+  <h2>Software engineer, fullstack web developer</h2>
   <div class="header-info">
     <i class="material-icons md-24">email</i><span class = "subheading-2">{{_mail}}</span>
   </div>
 </div>
+<mat-tab-group>
+  <mat-tab label="Resume">
 <div class="resume-content">
   <mat-card class="content-skills">
       <mat-card-title>Skills</mat-card-title>
@@ -19,3 +21,10 @@
       <app-education></app-education>
     </mat-card>
 </div>
+</mat-tab>
+<mat-tab label="About">
+  <div class="about-content">
+      <app-about></app-about>
+  </div>
+</mat-tab>
+</mat-tab-group>

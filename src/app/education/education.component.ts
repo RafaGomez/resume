@@ -10,7 +10,7 @@ import { ResumeDataService } from '../services/resume-data.service';
 })
 export class EducationComponent implements OnInit {
 
-  private education$: Observable<Education[]>;
+  public education$: Observable<Education[]>;
 
   constructor( private dataServ: ResumeDataService) { }
 
