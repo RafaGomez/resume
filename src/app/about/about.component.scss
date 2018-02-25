@@ -1,0 +1,21 @@
+:host{
+
+  .about-icon{
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    padding: 4px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+  }
+
+  .about-card{
+    max-width: 30rem;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+}

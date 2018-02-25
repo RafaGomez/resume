@@ -1,3 +1,4 @@
+import { Technology } from './../models/Technology';
 import { Education } from './../models/Education';
 import { Skill } from './../models/Skill';
 import { Experience } from './../models/Experience';
@@ -85,11 +86,33 @@ export class ResumeDataService {
     return Observable.of(result);
   }
 
-  public getEducation(): Observable<Education[]>{
+  public getEducation(): Observable<Education[]> {
     // TODO: In the future we will retrieve this info from an Firebase API
     const result: Education[] = [];
     let ed: Education = {name: 'Ingeniero técnico en informática de sistemas', year: 2008, institution: 'Universidad de sevilla'};
     result.push(ed as Education);
+
+    return Observable.of(result);
+  }
+
+  public getTecnologies(): Observable<Technology[]> {
+    // TODO: In the future we will retrieve this info from an Firebase API
+    const result: Technology[] = [];
+    let tec: Technology = {name: 'Angular 5', description: 'Built entirely in Angular 5',
+          icon: 'assets/angular.png'};
+    result.push(tec as Technology);
+    tec = {name: 'Angular CLI', description: 'Uses angular CLI to make production builds',
+          icon: 'assets/angular.png'};
+    result.push(tec as Technology);
+    tec = {name: 'Git hub', description: 'Github for source code repository',
+          icon: 'assets/github.svg'};
+    result.push(tec as Technology);
+    tec = {name: 'Firebase', description: 'Firebase for hosting and backend',
+    icon: 'assets/firebaseIcon.svg'};
+    result.push(tec as Technology);
+    tec = {name: 'PWA', description: 'Made as a Progressive Web App',
+    icon: 'assets/pwa_logo.png'};
+    result.push(tec as Technology);
 
     return Observable.of(result);
   }

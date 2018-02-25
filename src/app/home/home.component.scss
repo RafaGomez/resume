@@ -29,6 +29,10 @@
         margin-right: .5rem;
       }
     }
+
+    .about{
+      margin: 1rem 1rem 1rem 1rem;
+    }
   }
   .resume-content{
     display: flex;
@@ -53,6 +57,17 @@
       order: 2;
       margin: 1rem 1rem 1rem;
     }
+  }
+
+  .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .mat-tab-labels{
+    justify-content: center !important;
   }
 }
 

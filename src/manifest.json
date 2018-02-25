@@ -1,0 +1,20 @@
+{
+  "short_name": "RAFA_GOMEZ",
+  "name": "Resume Rafael Gómez",
+  "start_url": "/",
+
+  "theme_color": "#f48c5b",
+  "background_color": "#ffffff",
+
+  "display": "standalone",
+  "orientation": "portrait",
+
+  "icons": [
+      {
+          "src": "/assets/R.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ]
+
+}

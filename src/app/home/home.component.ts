@@ -10,8 +10,8 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  private _name: String;
-  private _mail: String;
+  _name: String;
+  _mail: String;
 
   ngOnInit() {
     // Populate sensible information to avoid bots

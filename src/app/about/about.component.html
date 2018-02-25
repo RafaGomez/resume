@@ -1,0 +1,11 @@
+<mat-card class="about-card">
+  <mat-list>
+    <h3 mat-subheader>Technologies used in this application</h3>
+    <mat-list-item *ngFor="let tech of technologies$ | async">
+      <img class="about-icon" [src]="tech.icon" >
+      <h4 mat-line>{{tech.name}}</h4>
+      <p mat-line> {{tech.description}} </p>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+
