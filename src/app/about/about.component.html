@@ -1,6 +1,7 @@
 <mat-card class="about-card">
+    <mat-card-title> Technologies used</mat-card-title>
   <mat-list>
-    <h3 mat-subheader>Technologies used in this application</h3>
+    <h3>This is my Resume made as a Progressive web app. You can view the source code in <a href="https://github.com/RafaGomez/resume">Github</a></h3>
     <mat-list-item *ngFor="let tech of technologies$ | async">
       <img class="about-icon" [src]="tech.icon" >
       <h4 mat-line>{{tech.name}}</h4>

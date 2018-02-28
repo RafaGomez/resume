@@ -1,5 +1,5 @@
 <mat-accordion>
-  <mat-expansion-panel *ngFor='let xp of experiencesObs | async'>
+  <mat-expansion-panel class="experience-panel" *ngFor='let xp of experiencesObs | async'>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <strong>{{xp.job}}</strong>
