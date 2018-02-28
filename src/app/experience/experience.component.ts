@@ -1,6 +1,6 @@
 import { ResumeDataService } from './../services/resume-data.service';
 import { Experience } from './../models/Experience';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 
@@ -11,16 +11,19 @@ import { Observable } from 'rxjs/Observable';
 })
 export class ExperienceComponent implements OnInit {
 
+  @Input() experiencesObs: Observable<Experience[]>;
+
   private panelOpenState;
 
-  public experiencesObs: Observable<Experience[]>;
+  // public experiencesObs: Observable<Experience[]>;
 
-  constructor(private _resumeServ: ResumeDataService) { }
+  constructor() { }
 
 
 
   ngOnInit() {
-    this.experiencesObs = this._resumeServ.getExperiences();
   }
 
+
 }
+

@@ -1,3 +1,4 @@
+import { ResumeDataService } from './../services/resume-data.service';
 import { Component, OnInit } from '@angular/core';
 import { toBase64String } from '@angular/compiler/src/output/source_map';
 
@@ -8,10 +9,12 @@ import { toBase64String } from '@angular/compiler/src/output/source_map';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private resumeDataServ: ResumeDataService ) { }
 
   _name: String;
   _mail: String;
+
+  public experiencesObs$;
 
   ngOnInit() {
     // Populate sensible information to avoid bots
@@ -22,6 +25,7 @@ export class HomeComponent implements OnInit {
     aux2 = 'bWV6QGdtYWlsLmNvbQ==';
     this._mail = atob(aux + aux2);
 
+    this.experiencesObs$ = this.resumeDataServ.getExperiences();
   }
 
 }
